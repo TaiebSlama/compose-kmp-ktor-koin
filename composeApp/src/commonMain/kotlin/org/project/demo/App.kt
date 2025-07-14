@@ -18,12 +18,15 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import demoktorkoin.composeapp.generated.resources.Res
 import demoktorkoin.composeapp.generated.resources.compose_multiplatform
+import io.ktor.client.HttpClient
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import org.koin.compose.koinInject
 
 @Composable
 @Preview
 fun App() {
+    val ktorClient = koinInject<HttpClient>()
     MaterialTheme {
         var showContent by remember { mutableStateOf(false) }
         Column(
