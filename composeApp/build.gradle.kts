@@ -88,12 +88,12 @@ kotlin {
             implementation(libs.ktor.client.darwin)
         }
         wasmJsMain.dependencies {
-            implementation("io.ktor:ktor-client-js:2.3.2")
+            implementation(libs.ktor.client.js)
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
             implementation(libs.kotlinx.coroutinesSwing)
-            implementation("io.ktor:ktor-client-cio:2.3.2")
+            implementation(libs.ktor.client.cio)
         }
     }
 }
